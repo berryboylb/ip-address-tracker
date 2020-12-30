@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+<link rel="stylesheet" href="css/style.css"></head>
+<body id="body">
+
+  <!-- IP Address Tracker
+
+  Search for any IP address or domain
+
+  IP Address
+  Location
+  Timezone
+    UTC 
+    add offset value dynamically using the API
+  ISP -->
+
+  <div class="container">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Daramola Olorunfemi</a>.
+    </div>
+    
+      <h2>IP ADDRESS TRACKER</h2>
+
+      <form id="form" align = "center">
+            <input id="input" type="text" placeholder="Search for any ip address or domain" onFocus="if (this.value !== ' ') this.style.color = 'grey';">
+            <button type="submit"> <img class="img" src="images/icon-arrow.svg" alt=""></button>
+      </form>
+
+      <div class="house">
+        <div class="con-ipaddress">
+            <p>ip address</p>
+            <h1 id="ipaddress">192.212.174.101</h1>
+        </div>
+        <div class="con-city">
+            <p>Location</p>
+            <h1 id="city">Brooklyn, Ny 10001</h1>
+        </div>
+        <div class="con-time">
+          <p>time</p>
+          <h1 id="timezone">UTC-05:00</h1>
+      </div>
+        <div class="con-isp">
+            <p>Isp</p>
+            <h1 id="isp">SpaceX StarLink</h1>
+        </div>
+      </div>
+
+      <div  id="premap">
+        <div id='map'></div>
+      </div>
+
+  </div>
+  
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

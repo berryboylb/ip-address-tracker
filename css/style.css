@@ -1,0 +1,549 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: auto;
+  color: cornflowerblue;
+}
+
+.attribution a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  background-image: url("../images/pattern-bg.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: fixed;
+  min-width: 100vw;
+  background-position: top;
+  background-size: cover;
+}
+
+.container h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-top: 1%;
+}
+
+.container form {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container form input {
+  padding: 1%;
+  width: 30%;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+.container form input::va .container form input::-webkit-input-placeholder {
+  color: grey;
+  opacity: 1;
+  /* Firefox */
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.container form input::va .container form input:-ms-input-placeholder {
+  color: grey;
+  opacity: 1;
+  /* Firefox */
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.container form input::va .container form input::-ms-input-placeholder {
+  color: grey;
+  opacity: 1;
+  /* Firefox */
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.container form input::va .container form input::placeholder {
+  color: grey;
+  opacity: 1;
+  /* Firefox */
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.container form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: grey;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.container form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: grey;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.container form input:focus {
+  border: 1px solid grey;
+  opacity: 1;
+}
+
+.container form button {
+  padding: 1%;
+  background: #000;
+  border-radius: 0px 8px 8px 0px;
+  outline: none;
+  border: none;
+  margin-left: -0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container form button img {
+  height: 18px;
+}
+
+.container .house {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  background: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.2%;
+  border-radius: 10px;
+  position: fixed;
+  left: 10%;
+  z-index: 9;
+}
+
+.container .house .con-ipaddress {
+  border-right: 1px solid grey;
+  padding: 3%;
+  width: 30%;
+}
+
+.container .house .con-ipaddress p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: lightgray;
+}
+
+.container .house .con-ipaddress h1 {
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+.container .house .con-city {
+  padding: 2%;
+  width: 30%;
+}
+
+.container .house .con-city p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: lightgray;
+}
+
+.container .house .con-city h1 {
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+.container .house .con-time {
+  border-left: 1px solid grey;
+  padding: 3%;
+  width: 30%;
+}
+
+.container .house .con-time p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: lightgray;
+}
+
+.container .house .con-time h1 {
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+.container .house .con-isp {
+  border-left: 1px solid grey;
+  padding: 3%;
+  width: 30%;
+}
+
+.container .house .con-isp p {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: lightgray;
+}
+
+.container .house .con-isp h1 {
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+.container #map {
+  height: 70vh;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: #000;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .container h2 {
+    font-size: 22px;
+    margin-bottom: 5%;
+  }
+  .container form {
+    height: 4%;
+  }
+  .container form input {
+    padding: 2%;
+    width: 50%;
+  }
+  .container form input::-webkit-input-placeholder {
+    font-size: 16px !important;
+  }
+  .container form input:-ms-input-placeholder {
+    font-size: 16px !important;
+  }
+  .container form input::-ms-input-placeholder {
+    font-size: 16px !important;
+  }
+  .container form input::placeholder {
+    font-size: 16px !important;
+  }
+  .container form button {
+    padding: 2%;
+    margin-left: -1%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container form button .img {
+    height: 10px;
+  }
+  .container .house {
+    margin-top: 3%;
+  }
+  .container .house .con-ipaddress {
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-ipaddress p {
+    font-size: 16px;
+  }
+  .container .house .con-ipaddress h1 {
+    font-size: 18px;
+    margin-top: 3%;
+  }
+  .container .house .con-city {
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-city p {
+    font-size: 16px;
+  }
+  .container .house .con-city h1 {
+    font-size: 18px;
+    margin-top: 3%;
+  }
+  .container .house .con-time {
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-time p {
+    font-size: 16px;
+  }
+  .container .house .con-time h1 {
+    font-size: 18px;
+    margin-top: 3%;
+  }
+  .container .house .con-isp {
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-isp p {
+    font-size: 16px;
+  }
+  .container .house .con-isp h1 {
+    font-size: 18px;
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .attribution {
+    font-size: 8px;
+    text-align: center;
+    margin: auto;
+    color: cornflowerblue;
+  }
+  .container h2 {
+    font-size: 20px;
+    margin-bottom: 5%;
+  }
+  .container form {
+    height: 4%;
+  }
+  .container form input {
+    padding: 2%;
+    width: 75%;
+  }
+  .container form input::-webkit-input-placeholder {
+    font-size: 12px !important;
+  }
+  .container form input:-ms-input-placeholder {
+    font-size: 12px !important;
+  }
+  .container form input::-ms-input-placeholder {
+    font-size: 12px !important;
+  }
+  .container form input::placeholder {
+    font-size: 12px !important;
+  }
+  .container form button {
+    padding: 2%;
+    margin-left: -1%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container form button .img {
+    height: 10px;
+  }
+  .container .house {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 40vh;
+    margin-top: 3%;
+  }
+  .container .house .con-ipaddress {
+    border-right: none;
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-ipaddress p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .container .house .con-ipaddress h1 {
+    font-size: 18px;
+    margin-top: 3%;
+    text-align: center;
+  }
+  .container .house .con-city {
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-city p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .container .house .con-city h1 {
+    font-size: 18px;
+    margin-top: 3%;
+    text-align: center;
+  }
+  .container .house .con-time {
+    border-left: none;
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-time p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .container .house .con-time h1 {
+    font-size: 18px;
+    margin-top: 3%;
+    text-align: center;
+  }
+  .container .house .con-isp {
+    border-left: none;
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-isp p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .container .house .con-isp h1 {
+    font-size: 18px;
+    margin-top: 3%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container h2 {
+    font-size: 18px;
+    margin-bottom: 3%;
+  }
+  .container form {
+    height: 4%;
+  }
+  .container form input {
+    padding: 2%;
+    width: 75%;
+  }
+  .container form input::-webkit-input-placeholder {
+    font-size: 10px !important;
+  }
+  .container form input:-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .container form input::-ms-input-placeholder {
+    font-size: 10px !important;
+  }
+  .container form input::placeholder {
+    font-size: 10px !important;
+  }
+  .container form button {
+    padding: 2%;
+    margin-left: -1%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container form button .img {
+    height: 10px;
+  }
+  .container .house {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 40vh;
+  }
+  .container .house .con-ipaddress {
+    border-right: none;
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-ipaddress p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .container .house .con-ipaddress h1 {
+    font-size: 16px;
+    margin-top: 3%;
+    text-align: center;
+  }
+  .container .house .con-city {
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-city p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .container .house .con-city h1 {
+    font-size: 16px;
+    margin-top: 3%;
+    text-align: center;
+  }
+  .container .house .con-time {
+    border-left: none;
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-time p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .container .house .con-time h1 {
+    font-size: 16px;
+    margin-top: 3%;
+    text-align: center;
+  }
+  .container .house .con-isp {
+    border-left: none;
+    padding: 2%;
+    width: 100%;
+  }
+  .container .house .con-isp p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .container .house .con-isp h1 {
+    font-size: 16px;
+    margin-top: 3%;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

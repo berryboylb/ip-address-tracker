@@ -1,0 +1,494 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.attribution { font-size: 11px; text-align: center;  margin: auto; color: cornflowerblue;}
+    .attribution a { color:#fff; text-decoration: none;}
+
+    body {
+        font-family: 'Rubik', sans-serif;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        background-image: url("../images/pattern-bg.png");
+        background-repeat: no-repeat;
+        height: 100vh;
+        position: fixed;
+        min-width: 100vw;
+        background-position: top;
+        background-size: cover;
+        // background: violet;
+
+        h2 {
+            font-size: 28px;
+            text-align: center;
+            color: #fff;
+            margin-top: 1%;
+        }
+
+        form {
+            margin-top: 1%;
+            margin-bottom: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input {
+                padding: 1%;
+                width: 30%;
+                border-radius: 8px 0 0 8px;
+                border: none;
+                outline: none;
+                height: 100%;
+
+                &::va
+                &::placeholder{
+                    color: grey;
+                    opacity: 1; /* Firefox */
+                    font-family: 'Rubik', sans-serif;
+                    font-size: 18px;
+                    opacity: 0.7;
+                }
+
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: grey;
+                    font-size: 18px;
+                    opacity: 0.7;
+                   }
+                   
+                   &::-ms-input-placeholder { /* Microsoft Edge */
+                    color: grey;
+                    font-size: 18px;
+                    opacity: 0.7;
+                   }
+
+                   &:focus {
+                       border: 1px solid grey;
+                       opacity: 1;
+                   }
+            }
+
+            button {
+                padding: 1%;
+                background: #000;
+                border-radius: 0px 8px 8px 0px;
+                outline: none;
+                border: none;
+                margin-left: -0.5% ;
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 18px;
+                }
+            }
+
+              
+        }
+
+        .house {
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+            background: #fff;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2%;
+            border-radius: 10px;
+            position: fixed;
+            left: 10%;
+            z-index: 9;
+
+            .con-ipaddress {
+                border-right: 1px solid grey;
+                padding: 3%;
+                width: 30%;
+
+                p {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: lightgray;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    margin-top: 5%;
+                }
+            }
+
+            .con-city {
+                // border-left: 1px solid grey;
+                padding: 2%;
+                width: 30%;
+
+                p {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: lightgray;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    margin-top: 5%;
+                }
+            }
+
+            .con-time {
+                border-left: 1px solid grey;
+                padding: 3%;
+                width: 30%;
+                p {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: lightgray;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    margin-top: 5%;
+                }
+            }
+
+            .con-isp {
+                border-left: 1px solid grey;
+                padding: 3%;
+                width: 30%;
+                p {
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: lightgray;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    margin-top: 5%;
+                }
+            }
+        }
+
+        #map {
+            height: 70vh;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+
+    .overlay {
+        position: absolute; 
+        top: 0; 
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        z-index: 999;
+        background-color: #000;
+    
+        font-size: 24px;
+        font-family: sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 1024px){
+        .container {
+            h2 {
+                font-size: 22px;
+                margin-bottom: 5%;
+            }
+    
+            form {
+                height: 4%;
+                input {
+                    padding: 2%;
+                    width: 50%;
+                    &::placeholder{
+                        font-size: 16px !important;
+                    }
+                }
+    
+                button {
+                    padding: 2%;
+                    margin-left: -1%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .img {
+                        height: 10px;
+                    }
+                }
+            }
+
+            .house {
+                margin-top: 3%;
+
+                .con-ipaddress {
+                    padding: 2%;
+                    width: 100%;
+    
+                    p {
+                        font-size: 16px;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                    }
+                }
+
+                .con-city {
+                    padding: 2%;
+                    width: 100%;
+    
+                    p {
+                        font-size: 16px;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                    }
+                }
+
+                .con-time {
+                    padding: 2%;
+                    width: 100%;
+                    p {
+                        font-size: 16px;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                    }
+                }
+
+                .con-isp {
+                    padding: 2%;
+                    width: 100%;
+                    p {
+                        font-size: 16px;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .attribution { font-size: 8px; text-align: center;  margin: auto; color: cornflowerblue;}
+        .container {
+            h2 {
+                font-size: 20px;
+                margin-bottom: 5%;
+            }
+    
+            form {
+                height: 4%;
+                input {
+                    padding: 2%;
+                    width: 75%;
+                    &::placeholder{
+                        font-size: 12px !important;
+                    }
+                }
+    
+                button {
+                    padding: 2%;
+                    margin-left: -1%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .img {
+                        height: 10px;
+                    }
+                }
+            }
+
+            .house {
+                flex-direction: column;
+                height: 40vh;
+                margin-top: 3%;
+
+                .con-ipaddress {
+                    border-right: none;
+                    padding: 2%;
+                    width: 100%;
+    
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+
+                .con-city {
+                    // border-left: 1px solid grey;
+                    padding: 2%;
+                    width: 100%;
+    
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+
+                .con-time {
+                    border-left: none;
+                    padding: 2%;
+                    width: 100%;
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+
+                .con-isp {
+                    border-left: none;
+                    padding: 2%;
+                    width: 100%;
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 18px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 540px){
+        .container {
+            h2 {
+                font-size: 18px;
+                margin-bottom: 3%;
+            }
+    
+            form {
+                height: 4%;
+                input {
+                    padding: 2%;
+                    width: 75%;
+                    &::placeholder{
+                        font-size: 10px !important;
+                    }
+                }
+    
+                button {
+                    padding: 2%;
+                    margin-left: -1%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .img {
+                        height: 10px;
+                    }
+                }
+            }
+
+            .house {
+                flex-direction: column;
+                height: 40vh;
+
+                .con-ipaddress {
+                    border-right: none;
+                    padding: 2%;
+                    width: 100%;
+    
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 16px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+
+                .con-city {
+                    // border-left: 1px solid grey;
+                    padding: 2%;
+                    width: 100%;
+    
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 16px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+
+                .con-time {
+                    border-left: none;
+                    padding: 2%;
+                    width: 100%;
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 16px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+
+                .con-isp {
+                    border-left: none;
+                    padding: 2%;
+                    width: 100%;
+                    p {
+                        font-size: 14px;
+                        text-align: center;
+                    }
+    
+                    h1 {
+                        font-size: 16px;
+                        margin-top: 3%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
