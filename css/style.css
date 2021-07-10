@@ -64,7 +64,7 @@ body {
   height: 100%;
 }
 
-.container form input::va .container form input::-webkit-input-placeholder {
+.container form input::-webkit-input-placeholder {
   color: grey;
   opacity: 1;
   /* Firefox */
@@ -73,7 +73,7 @@ body {
   opacity: 0.7;
 }
 
-.container form input::va .container form input:-ms-input-placeholder {
+.container form input:-ms-input-placeholder {
   color: grey;
   opacity: 1;
   /* Firefox */
@@ -82,7 +82,7 @@ body {
   opacity: 0.7;
 }
 
-.container form input::va .container form input::-ms-input-placeholder {
+.container form input::-ms-input-placeholder {
   color: grey;
   opacity: 1;
   /* Firefox */
@@ -91,7 +91,7 @@ body {
   opacity: 0.7;
 }
 
-.container form input::va .container form input::placeholder {
+.container form input::placeholder {
   color: grey;
   opacity: 1;
   /* Firefox */
@@ -260,6 +260,7 @@ body {
   .container form input {
     padding: 2%;
     width: 50%;
+    font-size: 12px;
   }
   .container form input::-webkit-input-placeholder {
     font-size: 16px !important;

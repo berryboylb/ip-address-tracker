@@ -2,9 +2,11 @@
 
 $(document).ready(function(){
     //making a get request to the api
+    
+     
 
-
-    $("#form").submit(function(event){
+    
+    $("form").submit(function(event){
         event.preventDefault();
 
         var ip = $("#input").val();
@@ -18,7 +20,8 @@ $(document).ready(function(){
 
         var api_key = "at_ONQTCJNH3JIump9YwqOKBseCMpBIH"; 
         
-        var url = "https://geo.ipify.org/api/v1?apiKey=at_ONQTCJNH3JIump9YwqOKBseCMpBIH&domain="+ip;
+        var url = "https://geo.ipify.org/api/v1?apiKey=at_SSqNQP7l0fuO9Tm7bQb1SUL0K0cp6&domain="+ip;
+        //var url = "https://geo.ipify.org/api/v1?apiKey=at_ONQTCJNH3JIump9YwqOKBseCMpBIH&ipAddress=8.8.8.8";
 
         $.get(url, function(data){
             // console.log(data);
